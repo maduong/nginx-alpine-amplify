@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM nginx:1.13.6-alpine
 
 LABEL maintainer="Hung Nguyen <nmhung1210@gmail.com>"
 
