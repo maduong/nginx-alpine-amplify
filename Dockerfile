@@ -58,8 +58,6 @@ RUN apk update && \
                 python-dev \
                 py-configobj \
                 git \
-                util-linux \
-                procps \
                 gcc \
                 musl-dev \
                 linux-headers &&\
@@ -69,7 +67,8 @@ RUN apk update && \
 
 COPY ./conf.d/agent.conf /etc/amplify-agent/agent.conf
 COPY ./entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+RUN chmod +x /entrypoint.sh; \
+    chmod +r /proc;
 
 # TO set/override API_KEY and AMPLIFY_IMAGENAME when starting an instance:
 # docker run --name my-nginx1 -e API_KEY='..effc' -e AMPLIFY_IMAGENAME="service-name" -d nginx-amplify
