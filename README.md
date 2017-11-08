@@ -94,20 +94,18 @@ We've been working on improving the support for Docker even more. Stay tuned!
 
 (**Note**: If you are really new to Docker, [here's](https://docs.docker.com/engine/installation/) how to install Docker Engine on various OS.)
 
-Let's pick our official [NGINX Docker image](https://hub.docker.com/_/nginx/) as a good example. The Dockerfile that we're going to use for an Amplify-enabled image is [part of this repo](https://github.com/nginxinc/docker-nginx-amplify/blob/master/Dockerfile).
-
-Here's how you can build the Docker image with the Amplify Agent inside, based on the official NGINX image:
+Here's how you can build the Docker Alpine image with the Amplify Agent inside, based on the official NGINX image:
 
 ```
-git clone https://github.com/nginxinc/docker-nginx-amplify.git
+git clone https://github.com/nmhung1210/nginx-alpine-amplify
 ```
 
 ```
-cd docker-nginx-amplify
+cd nginx-alpine-amplify
 ```
 
 ```
-docker build -t nginx-amplify .
+docker build -t nginx-alpine-amplify .
 ```
 
 After the image is built, check the list of Docker images:
@@ -117,8 +115,8 @@ docker images
 ```
 
 ```
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-nginx-amplify       latest              d039b39d2987        3 minutes ago       241.6 MB
+REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE
+nginx-alpine-amplify       latest              d039b39d2987        3 minutes ago       241.6 MB
 ```
 
 ### 2.2. Running an Amplify-enabled NGINX Docker Container
@@ -140,8 +138,8 @@ docker ps
 ```
 
 ```
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-7d7b47ba4c72        nginx-amplify       "/entrypoint.sh"    3 seconds ago       Up 2 seconds        80/tcp, 443/tcp     mynginx1
+CONTAINER ID        IMAGE                      COMMAND             CREATED             STATUS              PORTS               NAMES
+7d7b47ba4c72        nginx-alpine-amplify       "/entrypoint.sh"    3 seconds ago       Up 2 seconds        80/tcp, 443/tcp     mynginx1
 ```
 
 and you can also check `docker logs`:
@@ -200,8 +198,8 @@ docker ps -a
 ```
 
 ```
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                        PORTS               NAMES
-7d7b47ba4c72        nginx-amplify       "/entrypoint.sh"         22 minutes ago      Exited (137) 19 seconds ago                       mynginx1
+CONTAINER ID     IMAGE                 COMMAND             CREATED             STATUS                        PORTS               NAMES
+7d7b47ba4c72     nginx-alpine-amplify  "/entrypoint.sh"    22 minutes ago      Exited (137) 19 seconds ago                       mynginx1
 ```
 
 Happy monitoring, and feel free to send us questions, opinions, and any feedback in general.
