@@ -1,6 +1,8 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+ [![Docker Stars](https://img.shields.io/docker/stars/nmhung1210/nginx-alpine-amplify.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/nmhung1210/nginx-alpine-amplify/stars/count/) [![Docker pulls](https://img.shields.io/docker/pulls/nmhung1210/nginx-alpine-amplify.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/nmhung1210/nginx-alpine-amplify/)
+[![Docker Automated build](https://img.shields.io/docker/automated/nmhung1210/nginx-alpine-amplify.svg?maxAge=2592000?style=plastic)](https://github.com/nmhung1210/nginx-alpine-amplify/)
 
 - [1. Overview](#1-overview)
   - [1.1. NGINX Amplify Agent Inside Docker Container](#11-nginx-amplify-agent-inside-docker-container)
