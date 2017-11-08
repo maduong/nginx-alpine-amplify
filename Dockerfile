@@ -71,6 +71,6 @@ RUN chmod +x /entrypoint.sh; \
     chmod +r /proc;
 
 # TO set/override API_KEY and AMPLIFY_IMAGENAME when starting an instance:
-# docker run --name my-nginx1 -e API_KEY='..effc' -e AMPLIFY_IMAGENAME="service-name" -d nginx-amplify
+# docker run --name my-nginx1 -e API_KEY='..effc' -e AMPLIFY_IMAGENAME="service-name" -d nmhung1210/nginx-alpine-amplify
 
 ENTRYPOINT ["/entrypoint.sh"]
