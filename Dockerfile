@@ -1,6 +1,6 @@
 FROM nginx:1.13.6-alpine
 
-LABEL maintainer="Hung Nguyen <nmhung1210@gmail.com>"
+LABEL maintainer="Robert Pham <kingdom102@gmail.com>"
 
 ENV NGINX_AMPLIFY_VERSION 1.0.0
 
